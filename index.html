@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akshayasree Munagala</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+line-height:1.6;
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:45px 20px;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.hero h1{
+font-size:44px;
+color:#93c5fd;
+margin-bottom:12px;
+}
+
+.hero p{
+color:#cbd5f5;
+max-width:520px;
+margin-bottom:18px;
+}
+
+.hero img{
+width:230px;
+border-radius:20px;
+box-shadow:0 25px 60px rgba(59,130,246,.35);
+}
+
+/* BUTTONS */
+
+.btn{
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+margin-right:10px;
+transition:.3s;
+display:inline-block;
+}
+
+.primary{
+background:#2563eb;
+color:white;
+}
+
+.primary:hover{
+background:#1d4ed8;
+}
+
+.secondary{
+border:1px solid #60a5fa;
+color:#93c5fd;
+}
+
+.secondary:hover{
+background:#1e3a8a33;
+}
+
+/* ===== SECTION TITLE ===== */
+
+.section{
+margin-top:45px;
+}
+
+.section h2{
+color:#93c5fd;
+margin-bottom:20px;
+font-size:28px;
+}
+
+/* ===== GLASS CARD ===== */
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+border-radius:16px;
+padding:20px;
+border:1px solid rgba(255,255,255,0.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 50px rgba(59,130,246,.35);
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+background:#1e3a8a55;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+}
+
+/* ===== EXPERIENCE (CINEMATIC) ===== */
+
+.experience{
+padding:60px 20px;
+margin-top:40px;
+background:
+radial-gradient(circle at 20% 20%, #1e3a8a22, transparent),
+linear-gradient(135deg,#020617,#0f172a);
+border-radius:20px;
+}
+
+.exp-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+}
+
+.exp-card{
+position:relative;
+padding:24px;
+border-radius:18px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.15);
+overflow:hidden;
+transition:.45s;
+}
+
+.exp-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:120%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.25),
+transparent);
+transition:.7s;
+}
+
+.exp-card:hover::before{
+left:120%;
+}
+
+.exp-card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 60px rgba(59,130,246,.45);
+}
+
+.exp-card h3{
+margin-bottom:10px;
+}
+
+.exp-card p{
+color:#cbd5f5;
+margin-bottom:14px;
+font-size:14px;
+}
+
+.exp-card a{
+color:#93c5fd;
+text-decoration:none;
+}
+
+.exp-card a:hover{
+text-decoration:underline;
+}
+
+/* ===== EDUCATION ===== */
+
+footer{
+text-align:center;
+padding:30px;
+color:#94a3b8;
+margin-top:40px;
+border-top:1px solid #1e293b;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:.8s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="container hero fade">
+<div>
+<h1>Akshayasree Munagala</h1>
+
+<p>
+CSE-AIML student building scalable software systems,
+modern web applications and intelligent AI-driven solutions.
+</p>
+
+<a href="resume.pdf" class="btn primary" target="_blank">Download Resume</a>
+<a href="https://github.com/akshayareddy265" class="btn secondary" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/akshayasree-reddy-munagala-97409b352/" class="btn secondary" target="_blank">LinkedIn</a>
+
+</div>
+
+<img src="photo.jpg">
+</div>
+
+<!-- ABOUT -->
+<div class="container section fade">
+<h2>About</h2>
+<div class="card">
+Detail-oriented Computer Science student specializing in AI & ML.
+Completed internships and cybersecurity simulations with focus on
+clean, efficient and production-ready software development.
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="container section fade">
+<h2>Technical Skills</h2>
+
+<div class="skills">
+<div class="skill">Python</div>
+<div class="skill">C</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">MySQL</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">Data Structures</div>
+</div>
+
+</div>
+
+<!-- EXPERIENCE -->
+<div class="container experience fade">
+
+<h2>Experience</h2>
+
+<div class="exp-grid">
+
+<div class="exp-card">
+<h3>Deloitte – Cyber Job Simulation</h3>
+<p>Cybersecurity risk assessment and analysis.</p>
+<a href="deloitte.pdf" target="_blank">View Certificate →</a>
+</div>
+
+<div class="exp-card">
+<h3>Bharat Intern – Virtual Internship</h3>
+<p>Project-based development assignments.</p>
+<a href="bharat.pdf" target="_blank">View Offer Letter →</a>
+</div>
+
+<div class="exp-card">
+<h3>Oasis Infobyte – Python Internship</h3>
+<p>Developed Python applications.</p>
+<a href="oasis.pdf" target="_blank">View Offer Letter →</a>
+</div>
+
+<div class="exp-card">
+<h3>Cognifyz Technologies – Web Development</h3>
+<p>Hands-on frontend development experience.</p>
+<a href="cognifyz.pdf" target="_blank">View Offer Letter →</a>
+</div>
+
+</div>
+</div>
+
+<!-- EDUCATION -->
+<div class="container section fade">
+<h2>Education</h2>
+<div class="card">
+B.Tech – Computer Science & Engineering (AI & ML)<br>
+Malla Reddy Engineering College<br>
+2024 – 2028
+</div>
+</div>
+
+<footer>
+© 2026 Akshayasree Munagala
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
